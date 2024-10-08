@@ -140,9 +140,11 @@ public class T01_Register extends BaseTest {
         softAssert.assertAll();
 
     }
+   // @Test(groups = {"register"})
     @Test
-    public void testCase_03()
+    public void registerTestCase_03()
     {
+        SoftAssert softAssert= new SoftAssert();
         // test data
         String firstName="Amira";
         String lastName= "Hussein";

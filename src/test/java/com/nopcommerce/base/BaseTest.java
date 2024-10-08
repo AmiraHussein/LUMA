@@ -21,6 +21,7 @@ public class BaseTest extends BaseConfig {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         driver.navigate().to(getProperty("application_url"));
+
     }
     @AfterMethod
     public void tearDown () {
