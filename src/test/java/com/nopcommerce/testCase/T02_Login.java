@@ -58,7 +58,7 @@ public class T02_Login extends BaseTest
         login.enterPassword(password);
         // 5.Click on “Sign In” button
         login.clickSignInButton();
-        Thread.sleep(5000);
+
 
         // Expected Results:
         //    1.User navigated to page “https://magento.softwaretestingboard.com/” after click on Sign In with Valid Email and Password

@@ -3,12 +3,10 @@ package com.nopcommerce.testCase;
 import com.aventstack.extentreports.Status;
 import com.nopcommerce.base.BaseTest;
 import com.nopcommerce.pages.P01_Register;
-import com.nopcommerce.pages.P02_MyAccount;
+import com.nopcommerce.pages.P05_MyAccount;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
-import static com.nopcommerce.config.BaseConfig.*;
 
 /*
 1.Open URL: https://magento.softwaretestingboard.com/
@@ -76,27 +74,20 @@ public class T01_Register extends BaseTest {
     }
 
     @Test
-    //TC2: Validate an error message is displayed when user enter password and confirm password does not match each other
-    //1.
-    //Open URL: https://magento.softwaretestingboard.com/
-    //2.
-    //Click on “Create an Account” button
-    //3.
-    //Enter First Name
-    //4.
-    //Enter Last Name
-    //5.
-    //Enter Email “Valid format”
-    //6.
-    //Enter Password
-    //7.Enter Confirm Password does not match Password
-    //8.
-    //Click on Create an Account
-    //Expected Results:
-    //1.
-    //User navigated to page “https://magento.softwaretestingboard.com/customer/account/create/” after click on Create an Account from Homepage
-    //2.“Please enter the same value again.” This message will be displayed under confirm password field
-
+    /*
+     TC2: Validate an error message is displayed when user enter password and confirm password does not match each other
+        1.    Open URL: https://magento.softwaretestingboard.com/
+        2.    Click on “Create an Account” button
+        3.    Enter First Name
+        4.    Enter Last Name
+        5.    Enter Email “Valid format”
+        6.    Enter Password
+        7.Enter Confirm Password does not match Password
+        8.Click on Create an Account
+        Expected Results:
+        1.User navigated to page “https://magento.softwaretestingboard.com/customer/account/create/” after click on Create an Account from Homepage
+        2.“Please enter the same value again.” This message will be displayed under confirm password field
+    */
     public void testCase_02()
     {
         // test data
@@ -113,19 +104,19 @@ public class T01_Register extends BaseTest {
         P01_Register registerPage=new P01_Register(driver);
 
 
-//        2.Click on “Create an Account” button
+        // 2.Click on “Create an Account” button
         registerPage.OPenRegisterPage();
         //Expected Results:
         //1.User navigated to page “https://magento.softwaretestingboard.com/customer/account/create/” after click on Create an Account from Homepage
         softAssert.assertEquals(registerPage.getCurrentUrl(),"https://magento.softwaretestingboard.com/customer/account/create/");
 
-//        3.Enter First Name
+        // 3.Enter First Name
         registerPage.getFirstName().sendKeys(firstName);
-//        4.Enter Last Name
+        // 4.Enter Last Name
         registerPage.getLastName().sendKeys(lastName);
-//        5.Enter Email “Valid format”
+        // 5.Enter Email “Valid format”
         registerPage.getEmail().sendKeys(email);
-//        6.Enter Password
+        // 6.Enter Password
         registerPage.getPassword().sendKeys(password);
         //7.Enter Confirm Password does not match Password
         registerPage.getConfirmPassword().sendKeys(confirmPassword);
@@ -141,22 +132,27 @@ public class T01_Register extends BaseTest {
 
     }
    // @Test(groups = {"register"})
+
+
+
+    // Validate that user after register with valid data, will be navigated to My Account page
     @Test
-    public void registerTestCase_03()
+    public void register_TC03()
     {
-        SoftAssert softAssert= new SoftAssert();
-        // test data
-        String firstName="Amira";
-        String lastName= "Hussein";
-        String email= "amira@test2.con";
-        String password="Aa@12345H";
-        String confirmPassword="Aa@12345H";
+
         String methodName = new Exception().getStackTrace()[0].getMethodName();
         test = extent.createTest(methodName, "Your Test Case");
         test.log(Status.INFO, "starting");
         test.assignCategory("P0");
         // create object from register page
         P01_Register registerPage=new P01_Register(driver);
+        // test data
+        String firstName="Amira";
+        String lastName= "Hussein";
+        String email= "amira@test2.con";
+        String password="Aa@12345H";
+        String confirmPassword="Aa@12345H";
+
 
 
 //        2.Click on “Create an Account” button
@@ -179,14 +175,17 @@ public class T01_Register extends BaseTest {
         registerPage.SubmitRegisterForm();
 
         //Expected Results:
-        P02_MyAccount myAccount=new P02_MyAccount(driver);
+        P05_MyAccount myAccount=new P05_MyAccount(driver);
         //1. User navigated to page “https://magento.softwaretestingboard.com/customer/account/” after click on Create an Account
         softAssert.assertEquals(myAccount.getCurrentUrl(),"https://magento.softwaretestingboard.com/customer/account/");
-        //2.In Contact Information
-        //a.First name
-        //b.Last name
-        //c.Email
-        //It should be the same as user input during registration
+        /*
+            2.In Contact Information
+                a.First name
+                b.Last name
+                c.Email
+                It should be the same as user input during registration
+
+         */
 
         String actualContactInformation=myAccount.getContactInformation();
         softAssert.assertTrue(actualContactInformation.contains(firstName));

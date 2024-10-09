@@ -45,7 +45,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Oct 8, 2024 10:37:16 AM</span>
+			<span class='label blue darken-3 suite-start-time'>Oct 9, 2024 03:45:18 AM</span>
 			</a>
 		</ul>
 	</div>
@@ -61,6 +61,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -113,10 +114,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> test(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='66.667%'><span class='strong'>2</span> test(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -134,17 +135,17 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>testCase_01</span>
-						<span class='test-time'>Oct 8, 2024 10:37:21 AM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-name'>registerTestCase_03</span>
+						<span class='test-time'>Oct 9, 2024 03:45:25 AM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Oct 8, 2024 10:37:21 AM</span>
-	<span class='label end-time'>Oct 8, 2024 10:37:28 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+908ms</span>
+	<span class='label start-time'>Oct 9, 2024 03:45:25 AM</span>
+	<span class='label end-time'>Oct 9, 2024 03:45:54 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 28s+317ms</span>
 </div>
 <div class='test-desc'>Your Test Case </div>
 <div class='test-attributes'>
@@ -164,7 +165,75 @@
 		<tbody>
 			<tr class='log' status='info'>
 				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>10:37:21 AM</td>
+				<td class='timestamp'>3:45:25 AM</td>
+				<td class='step-details'>
+						starting
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>3:45:54 AM</td>
+				<td class='step-details'>
+						no such element: Unable to locate element: {"method":"xpath","selector":"(//div[@class="box-content"])[1]"}
+  (Session info: chrome=129.0.6668.90)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.1', revision: '656257d8e9'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2943655120c60fc3626a894e796f04f9, findElement {value=(//div[@class="box-content"])[1], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.90, chrome: {chromedriverVersion: 129.0.6668.91 (b00bc8b76d60..., userDataDir: C:\Users\Amira\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63117}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63117/devtoo..., se:cdpVersion: 129.0.6668.90, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2943655120c60fc3626a894e796f04f9
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>3:45:54 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>REGISTERTESTCASE_03 FAIL</span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='.\screenshots\screenshot0.6185067568825503.png' src='.\screenshots\screenshot0.6185067568825503.png' data-src='.\screenshots\screenshot0.6185067568825503.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>testCase_01</span>
+						<span class='test-time'>Oct 9, 2024 03:46:03 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Oct 9, 2024 03:46:03 AM</span>
+	<span class='label end-time'>Oct 9, 2024 03:46:08 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+647ms</span>
+</div>
+<div class='test-desc'>Your Test Case </div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>P0</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:46:03 AM</td>
 				<td class='step-details'>
 						starting
 					
@@ -172,9 +241,58 @@
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>10:37:28 AM</td>
+				<td class='timestamp'>3:46:08 AM</td>
 				<td class='step-details'>
 						<span class='badge white-text green'>TESTCASE_01 PASS</span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>testCase_02</span>
+						<span class='test-time'>Oct 9, 2024 03:46:17 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Oct 9, 2024 03:46:17 AM</span>
+	<span class='label end-time'>Oct 9, 2024 03:46:22 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+196ms</span>
+</div>
+<div class='test-desc'>Your Test Case </div>
+<div class='test-attributes'>
+	<div class='category-list'>
+		<span class='category label'>P0</span>
+	</div>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>3:46:17 AM</td>
+				<td class='step-details'>
+						starting
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>3:46:22 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'>TESTCASE_02 PASS</span>
 					
 				</td>
 			</tr>
@@ -225,13 +343,14 @@
 					<div class='category-heading'>
 						<span class='category-name'>P0</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
+						<span class='label pass'>2</span>
+						<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
-							
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -245,8 +364,18 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Oct 8, 2024 10:37:21 AM</td>
-										<td class='linked' test-id='1'>testCase_01</td>
+										<td>Oct 9, 2024 03:45:25 AM</td>
+										<td class='linked' test-id='1'>registerTestCase_03</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Oct 9, 2024 03:46:03 AM</td>
+										<td class='linked' test-id='2'>testCase_01</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Oct 9, 2024 03:46:17 AM</td>
+										<td class='linked' test-id='3'>testCase_02</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -271,7 +400,7 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
@@ -283,19 +412,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Oct 8, 2024 10:37:16 AM</div>
+					<div class='panel-lead'>Oct 9, 2024 03:45:18 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Oct 8, 2024 10:37:29 AM</div>
+			 		<div class='panel-lead'>Oct 9, 2024 03:46:23 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 12s+837ms</div>
+					<div class='panel-lead'>0h 1m 4s+962ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -312,11 +441,11 @@
 						</tr>
 						<tr>
 							<td>P0</td>
+							<td>2</td>
 							<td>1</td>
 							<td>0</td>
-							<td>0</td>
 							<td>
-									100%
+									66.667%
 							</td>
 						</tr>
 					</table>
@@ -330,14 +459,14 @@
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 1,
-				passParent: 1,
-				failParent: 0,
+                parentCount: 3,
+				passParent: 2,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 1,
 				childCount: 0,
 				passChild: 0,
 				failChild: 0,
@@ -362,7 +491,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "testCase_01":7.908
+			        "registerTestCase_03":28.317,"testCase_01":4.647,"testCase_02":5.196
 			};
 		</script>
 		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>

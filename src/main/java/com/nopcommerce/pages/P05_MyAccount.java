@@ -2,13 +2,12 @@ package com.nopcommerce.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
-public class P02_MyAccount
+public class P05_MyAccount
 {
     WebDriver driver;
 
-    public P02_MyAccount(WebDriver driver) {
+    public P05_MyAccount(WebDriver driver) {
         this.driver = driver;
     }
 
